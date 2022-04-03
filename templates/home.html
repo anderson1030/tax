@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="login-box">
+  <h2>Income for the year of assessment</h2>
+  <form method="post" action="/tax">
+  	<div class="user-box">
+    <div class="account-type">
+    
+
+
+
+
+
+	<p style="color: #FFF">Marital status:</p>
+	<input type="radio" id="single" name="type" value="single" checked onclick="javascript:yesnoCheck();">
+	<label for="single" class="radio">Single</label>
+	<input  id="yesCheck" type="radio" id="married" name="type" value="married" onclick="javascript:yesnoCheck();">
+	<label for="married" class="radio">Married</label></br>
+
+
+	</div>
+	</div>
+
+	<br>
+
+    <div class="user-box">
+      <input type="text" name="self" placeholder="" onfocus="this.value=''" value="0"  pattern="[0-9]+" >
+      <label>Self HK$ (Exclude cents)</label>
+    </div>
+    <div id="ifYes" class="user-box" style="display:none">
+
+
+    	<input type="text" name="spouse" placeholder="" onfocus="this.value=''" value="0"  pattern="[0-9]+">
+     
+      <label>Spouse HK$ (Exclude cents)</label>
+    </div>
+
+    <div class="flex">
+	    <a >
+	      <span></span>
+	      <span></span>
+	      <span></span>
+	      <span></span>
+	       <input type="submit" value="submit" >
+	    </a>
+	</div>
+  </form>
+</div>
+
+
+<script type="text/javascript">
+
+function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('ifYes').style.display = 'block';
+    }
+    else document.getElementById('ifYes').style.display = 'none';
+}
+
+</script>
+
+
+
+
+
+
+	<!-- <hr>
+	<label id="icon" for="name"><i class="fas fa-dollar-sign"></i></label>
+	Income for the year of assessment:<br> 
+	<label for="self">Self HK$ (Exclude cents)</label> 
+	<input type="text" name="self" placeholder="Self HK$ (Exclude cents)" required>
+
+	<label id="icon" for="name"><i class="fas fa-dollar-sign"></i></label>
+	
+	<input type="text" name="spouse" placeholder="Spouse HK$ (Exclude cents)" required>
+
+	 <div class="btn-block">
+		<button  type="submit" class="btn btn-primary" value="submit">Submit</button>
+	</div>
+	</form>
+ </div>
+ -->
+
+{% endblock %}

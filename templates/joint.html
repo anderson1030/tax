@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="login-box">
+   <h2>Joint Assessment Result</h2>
+
+   
+   <div class="result">
+      <table>
+         <tr>
+            <th>Item</th>
+            <th>Self</th>
+            <th>Spouse</th>
+            <th>Under Joint Assessment</th>
+         </tr>
+         <tr>
+            <td>Income</td>
+            <td>{{self_income}}</td>
+            <td>{{spouse_income}}</td>
+            <td>{{joint_income}}</td>
+         </tr>
+         <tr>
+            <td>MPF</td>
+            <td>{{self_mpf}}</td>
+            <td>{{spouse_mpf}}</td>
+            <td>{{joint_mpf}}</td>
+         </tr>
+         <tr>
+            <td>Allowance</td>
+            <td>{{allowance}}</td>
+             <td>{{allowance}}</td>
+              <td>{{joint_allowance}}</td>
+         </tr>
+         <tr>
+            <td>Net Charge Income</td>
+            <td>{{self_net_charge_income}}</td>
+            <td>{{spouse_net_charge_income}}</td>
+            <td>{{joint_net_charge_income}}</td>
+         </tr>
+         <tr>
+            <td>Tax Payable</td>
+            <td>{{self_taxpay}}</td>
+            <td>{{spouse_taxpay}}</td>
+            <td>{{joint_taxpay}}</td>
+         </tr>
+         <tr>
+            <td>Total Tax Payable</td>
+            <td colspan="2" class="center">{{totaltax}}</td>
+            <td>{{joint_taxpay}}</td>
+         </tr>
+      </table>
+   </div>
+
+   <p>Joint Assessment would be recommended in this case！</p>
+   
+   <div class="flex">
+      <a class="back" href="/">
+      Back to Home
+      </a>
+   </div>
+</div>
+{% endblock %}

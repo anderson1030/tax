@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="login-box">
+   <h2>Single Result</h2>
+   <div class="result">
+      <table >
+         <tr>
+            <th>Items</th>
+            <th>$</th>
+         </tr>
+         <tr>
+            <td>Income</td>
+            <td>{{income}}</td>
+         </tr>
+         <tr>
+            <td>MPF</td>
+            <td>{{mpf}}</td>
+         </tr>
+         <tr>
+            <td>Allowance</td>
+            <td>{{allowance}}</td>
+         </tr>
+         <tr>
+            <td>Net Charge Income</td>
+            <td>{{net_charge_income}}</td>
+         </tr>
+         <tr>
+            <td>Taxpay</td>
+            <td>{{taxpay}}</td>
+         </tr>
+      </table>
+   </div>
+   <div class="flex">
+      <a class="back" href="/">
+      Back to Home
+      </a>
+   </div>
+</div>
+
+{% endblock %}
